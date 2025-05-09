@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Sākums{% endblock %}
+{% block content %}
+<h1>Laipni lūdzam Dreamfluff mājaslapā!</h1>
+
+<!-- Jaunais teksts zem virsraksta -->
+<p>Lai apskatītu uzņēmuma piedāvāto klāstu, droši apskati sadaļu <strong>'Produkti'</strong>!</p>
+
+<main>
+    <section class="team-section">
+        <div class="team-container">
+            <img src="{{ url_for('static', filename='images/team_group.jpg') }}" alt="Komandas kopbilde" class="team-image">
+            <div class="team-info">
+                <h3>Dreamfluff komanda</h3>
+                <p><strong>Una Andersone</strong> - Galvenā ražotāja</p>
+                <p><strong>Tīna Spriņģe</strong> - Grāmatvede</p>
+                <p><strong>Laura Līna Ezeriņa</strong> - Sociālo tīklu atbildīgā</p>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{{ product["name"] }} - MiniVeikals{% endblock %}
+{% block content %}
+<div class="products-show">
+    <img src="{{ url_for('static', filename='images/products/' ~ product['image']) }}" alt="{{ product['name'] }}">
+
+    <div>
+        <h2>{{ product["name"] }}</h2>
+        <p class="product-price">Cena: {{ product["price"] }} €</p>
+
+        <div class="product-details">
+            <h3>Materiāli:</h3>
+            <p>{{ product["materiali"] or 'Nav pieejams' }}</p>
+
+            <h3>Izmērs:</h3>
+            <p>{{ product["kads"] or 'Nav pieejams' }}</p>
+
+            <h3>Krāsa:</h3>
+            <p>{{ product["krasa"] or 'Nav pieejams' }}</p>
+        </div>
+    </div>
+
+    <h3>Atsauksmes:</h3>
+    <table class="reviews-table">
+        <thead>
+            <tr>
+                <th>Vārds</th>
+                <th>Atsauksme</th>
+                <th></th> <!-- No "Akcija" kolonnas -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for review in reviews %}
+                <tr>
+                    <td>{{ review["vards"] }}</td>
+                    <td>{{ review["teksts"] }}</td>
+                    <td>
+                        <form action="{{ url_for('dzest_atsauksmi', review_id=review['id'], product_id=product['id']) }}" method="POST">
+                            <button type="submit" class="delete-review-btn">Dzēst</button>
+                        </form>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">Nav atsauksmju šim produktam.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ url_for('pievienot_atsauksmi', product_id=product['id']) }}">Pievienot atsauksmi</a>
+</div>
+{% endblock %}

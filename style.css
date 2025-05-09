@@ -1,0 +1,400 @@
+body {
+    font-family: 'Lora', sans-serif;
+    background-color: #f8e4e1; /* Gaiši rozā fons */
+    color: #4a4a4a; /* Tumši pelēks teksts */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f7c8b7; /* Gaiši persiku krāsas fons */
+    color: #333;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 120px; /* Lielāks logo izmērs */
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #5d4037; /* Tumši brūns tonis */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ff8c00; /* Dzīvotspējīgs oranžs tonis hover */
+}
+
+main {
+    padding: 40px;
+}
+
+footer {
+    background-color: #f7c8b7; /* Gaiši persiku krāsas fons */
+    text-align: center;
+    padding: 15px 0;
+    color: #4a4a4a;
+}
+
+.products-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.products-item {
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    color: #333;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.products-item:hover {
+    transform: scale(1.05);
+    background-color: #f1ebe5; /* Gaiši krēmkrāsas hover efekts */
+}
+
+.products-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.products-show {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.products-show h2 {
+    font-size: 32px;
+    color: #5d4037; /* Tumši brūns */
+}
+
+.products-show p {
+    font-size: 20px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+}
+
+ul li:hover {
+    background-color: #e0e0e0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 60vh; /* Attēla augstums tagad aizņem 60% no ekrāna augstuma */
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px; /* Samazināts attālums no pārējā satura */
+}
+
+.dash-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.products-show {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: #f9f0e3; /* Gaiši dzeltena fonā */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.products-show img {
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.products-show img:hover {
+    transform: scale(1.05);
+}
+
+.products-show div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.products-show h2 {
+    font-size: 28px;
+    color: #252525;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #c1b7af;
+    padding-bottom: 5px;
+}
+
+.products-show p {
+    font-size: 20px;
+    color: #444;
+    margin: 10px 0;
+}
+
+.products-show .product-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b58655; /* Pasteļbrūns */
+}
+
+.products-show .product-materials {
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #e2d7cc; /* Gaiši krēmkrāsas fons */
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+.products-show .product-materials li {
+    list-style-type: "✓ ";
+    margin-bottom: 5px;
+}
+
+.team-section {
+    padding: 40px;
+    background-color: #f7f3ef;
+}
+
+.team-section h2 {
+    font-size: 50px; /* Palielināts fonta izmērs */
+    margin-bottom: 40px; /* Palielināts attālums */
+    color: #4a4a4a;
+    text-align: left; /* Teksts paliek kreisajā malā */
+}
+
+.team-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px; /* Palielināts attālums starp elementiem */
+    max-width: 100%; /* Palielināts platums, lai aizņemtu visu pieejamo platumu */
+    margin-left: 0; /* Pārvietojam elementus tuvāk kreisajai malai */
+    flex-wrap: nowrap;
+}
+
+.team-image {
+    width: 300px; /* Palielināts attēla platums */
+    height: auto;
+    max-width: 100%; /* Pārliecināmies, ka attēls nepārsniedz platumu */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.team-info {
+    text-align: left;
+    max-width: 700px; /* Palielināts maksimālais platums */
+}
+
+.team-info h3 {
+    font-size: 36px; /* Palielināts fonta izmērs */
+    margin-bottom: 20px; /* Palielināts attālums */
+    color: #333;
+}
+
+.team-info p {
+    font-size: 24px; /* Palielināts fonta izmērs */
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Responsīvais izkārtojums */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: flex-start; /* Mainīts uz "flex-start", lai attēli un teksts būtu tuvāk kreisajai malai */
+    }
+
+    .team-image {
+        margin-bottom: 30px; /* Palielināts attālums */
+    }
+
+    .team-info {
+        text-align: left; /* Mainīts uz "left" */
+    }
+}
+
+p {
+    font-size: 20px;
+    color: #4a4a4a;
+    text-align: left;
+    margin-top: 20px;
+}
+
+p strong {
+    font-weight: bold;
+    color: #000;
+}
+
+.hero-image {
+    width: 100%;
+    height: 60vh; /* Attēla augstums tagad aizņem 60% no ekrāna augstuma */
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px; /* Samazināts attālums no pārējā satura */
+}
+
+.dash-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 10px; /* Samazināts attālums no attēla līdz tekstam */
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Izkārtojums produktiem */
+.products-list {
+    display: grid; /* Izmanto grid izkārtojumu */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Kolonnu skaits pielāgojas ekrāna platumam */
+    gap: 20px; /* Attālums starp produkta kartēm */
+    margin-top: 20px;
+}
+
+/* Katras produkta kartītes stils */
+.products-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f7f3ef;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.products-item:hover {
+    transform: translateY(-5px); /* Nedaudz paceļ produkta kartīti */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Uzlabota ēna hover efektam */
+}
+
+/* Attēla izskats */
+.product-image {
+    width: 100%;
+    height: 200px; /* Viens augstums visiem attēliem */
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Attēls saglabā proporcijas un aizpilda visus laukumus */
+}
+
+/* Produkta nosaukums un cena */
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #777;
+}
+/* Atsauksmju tabula */
+.reviews-table {
+    width: 100%;
+    border-collapse: collapse; /* Noņem līniju starp tabulas šūnām */
+    margin-top: 20px;
+}
+
+.reviews-table th, .reviews-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.reviews-table th {
+    background-color: #f7c8b7; /* Gaiši persiku krāsa */
+    color: #333;
+    font-weight: bold;
+}
+
+.reviews-table td {
+    background-color: #fff;
+}
+
+.reviews-table tr:hover {
+    background-color: #f4f4f4; /* Gaiši pelēks hover efekts */
+}
+
+/* Dzēšanas poga */
+.delete-review-btn {
+    background-color: #ff5757; /* Sarkanīga krāsa pogai */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-review-btn:hover {
+    background-color: #ff2a2a; /* Tumšāks sarkanais hover */
+}
+
+.delete-review-btn:focus {
+    outline: none;
+}
